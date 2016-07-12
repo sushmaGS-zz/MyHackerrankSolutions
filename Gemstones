@@ -1,0 +1,33 @@
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+        int numCases = in.nextInt();
+        
+        HashSet<Character> baseChar = new HashSet<Character>();
+        HashSet<Character> currChar = new HashSet<Character>();
+        
+        for(char i = 'a'; i <= 'z'; i++)
+            baseChar.add(i);
+        
+        while(numCases > 0)
+            {  
+            currChar.clear();
+            char[] arr = in.next().toCharArray();
+            for(int i = 0; i < arr.length; i++)
+                {                
+                currChar.add(arr[i]); 
+            }
+                numCases--;
+            
+            baseChar.retainAll(currChar);
+            
+        }
+        System.out.print(baseChar.size());
+        
+	}
+
+}
