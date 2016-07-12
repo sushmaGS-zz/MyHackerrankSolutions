@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner in = new Scanner(System.in);
+        int T = in.nextInt();
+        int studentAttended =0;
+        
+        for(int j =0; j< T; j++)
+            {
+            int totalStudents = in.nextInt();
+            int minReqStudents = in.nextInt();
+            int[] arr = new int[totalStudents];
+            
+            for(int i =0; i<totalStudents; i++)
+            {
+            arr[i] = in.nextInt();                       
+                if(arr[i] < 0 || arr[i] == 0)
+                studentAttended++;              
+        }
+        if(studentAttended >= minReqStudents)
+            System.out.println("NO");
+        else
+            System.out.println("YES");
+            studentAttended =0;
+        }
+    }
+}
