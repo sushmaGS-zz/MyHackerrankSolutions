@@ -1,3 +1,3 @@
 # MyHackerrankSolutions
 
-I will add my solution to some of the hackerrank problems 
+I will add my solutions to some of the hackerrank problems 
